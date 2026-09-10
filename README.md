@@ -6,6 +6,10 @@
 
 Tests whether a proxy measurement still represents its declared target.
 
+## Problem
+
+A metric keeps moving after it stopped meaning anything. Tests whether the proxy still stands for its target.
+
 ## Install
 
 ```
@@ -16,9 +20,16 @@ pip install loomground-proxy
 
 ```python
 from loomground_proxy import Movement, Proxy, check_proxies
-subs = check_proxies([Proxy("response_time", "client_was_served", ref="policy#3")],
-                     {"response_time": Movement.IMPROVED, "client_was_served": Movement.WORSENED})
-subs[0].kind
+subs = check_proxies([Proxy("tickets_closed", "customer_problems_solved", ref="okr#2")],
+                     {"tickets_closed": Movement.IMPROVED, "customer_problems_solved": Movement.WORSENED})
+subs[0]
+```
+
+## Example
+
+```
+in : tickets_closed IMPROVED while customer_problems_solved WORSENED
+out: Substitution(kind='gamed', metric='tickets_closed', stands_for='customer_problems_solved', why='tickets_closed improved while customer_problems_solved, which it is declared to stand for, got worse (okr#2)')
 ```
 
 ## Interface
