@@ -1,0 +1,30 @@
+# loomground-proxy
+
+> Tests whether a proxy measurement still represents its declared target.
+
+## Problem
+A metric keeps moving after it stopped meaning anything. Tests whether the proxy still stands for its target.
+
+## Install
+```
+pip install loomground-proxy
+```
+
+## Usage
+```python
+from loomground_proxy import Movement, Proxy, check_proxies
+subs = check_proxies([Proxy("tickets_closed", "customer_problems_solved", ref="okr#2")],
+                     {"tickets_closed": Movement.IMPROVED, "customer_problems_solved": Movement.WORSENED})
+subs[0]
+```
+
+## Interface
+- inputs: `Proxy(metric, stands_for, ref)` · readings `{subject: Movement}`: `IMPROVED` · `UNCHANGED` · `WORSENED` · `UNMEASURED`
+- output: `Substitution(kind, metric, stands_for, why)`; `KINDS`: `gamed` · `misleading` · `unchecked` · `tracking`
+- `chain(metric, proxies)` · `fold_substitutions(substitutions) → IssueAggregate`
+- from solver: `cross_subsumption.Verdict` · `issue_aggregation.aggregate_issues`
+
+## Family
+Diagnostic operator; consumes `loomground-solver` 0.5; consumed by hosts. Pipeline: `source → loomground-ingest → loomground-versum → loomground-solver → loomground-proxy`. Operator contract: [spec/OPERATORS.md](https://github.com/flxk1/loomground/blob/main/spec/OPERATORS.md). [docs/operator.md](docs/operator.md).
+
+Language: loomground — guide https://github.com/flxk1/loomground/blob/main/llms.txt (the .lg language an agent reads, emits, validates); catalogue https://github.com/flxk1/loomground/blob/main/CATALOGUE.json
