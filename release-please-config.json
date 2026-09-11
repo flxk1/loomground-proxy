@@ -5,7 +5,9 @@
       "release-type": "python",
       "package-name": "loomground-proxy",
       "changelog-path": "CHANGELOG.md",
-      "version-file": "src/loomground_proxy/_version.py"
+      "extra-files": [
+        "src/loomground_proxy/_version.py"
+      ]
     }
   }
 }
