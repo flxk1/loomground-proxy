@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/flxk1/loomground-proxy/compare/loomground-proxy-v0.2.0...loomground-proxy-v0.2.1) (2026-09-12)
+
+
+### Bug Fixes
+
+* release version source (extra-files marker), 0.2.0 ([c393638](https://github.com/flxk1/loomground-proxy/commit/c3936382b494bf1942943294ec537418354d4178))
+
 ## [0.2.0](https://github.com/flxk1/loomground-proxy/compare/loomground-proxy-v0.1.0...loomground-proxy-v0.2.0) (2026-09-11)
 
 
