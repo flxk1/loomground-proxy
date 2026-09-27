@@ -13,7 +13,7 @@ A metric keeps moving after it stopped meaning anything. Tests whether the proxy
 ## Install
 
 ```
-pip install loomground-proxy
+pip install git+https://github.com/flxk1/loomground-proxy
 ```
 
 ## Usage
@@ -45,7 +45,11 @@ Diagnostic operator; consumes `loomground-solver` 0.5–0.6; consumed by hosts. 
 
 ## Status
 
-0.1.0 · 26 tests · Python >=3.10 · solver 0.5–0.6
+0.2.0 · 26 tests · Python >=3.10 · solver 0.5–0.6
+
+## How this is made
+
+The code and documentation are written with Loomground agents running on Claude (Anthropic). The maintainer reads and corrects all of it.
 
 ## License
 
