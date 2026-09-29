@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.2.1](https://github.com/flxk1/loomground-proxy/compare/loomground-proxy-v0.2.0...loomground-proxy-v0.2.1) (2026-09-29)
+
+
+### Bug Fixes
+
+* release version source (extra-files marker), 0.2.0 ([1dddf66](https://github.com/flxk1/loomground-proxy/commit/1dddf66c3b988f51ea846dd102b9049c915362e3))
+
+
+### Documentation
+
+* correct stale claims and add How this is made ([f8dc770](https://github.com/flxk1/loomground-proxy/commit/f8dc7709e39f41ff4b2f43c701d8b28c0037335a))
+* correct stale claims; add How this is made ([0b9c113](https://github.com/flxk1/loomground-proxy/commit/0b9c113a8733f7d27b3a72131883b20840f1dec8))
+* How this is made names no model vendor ([cf2b28c](https://github.com/flxk1/loomground-proxy/commit/cf2b28c564909b1112763d99c6a8a5eab56b40de))
+
 ## [0.2.0](https://github.com/flxk1/loomground-proxy/compare/loomground-proxy-v0.1.0...loomground-proxy-v0.2.0) (2026-09-11)
 
 
